@@ -1,0 +1,143 @@
+@use '../styles/styles.scss' as *;
+
+.container {
+    padding: 48px max(32px, calc((100vw - $body-width) / 2));
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px 500px 64px;
+    flex-wrap: wrap;
+
+    &__logo {
+        width: 112px;
+        min-width: 112px;
+        height: 112px;
+        min-height: 112px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.1);
+        padding: 21px;
+    }
+
+    &__title {
+        margin-top: auto;
+        &-brand {
+            font-size: $h3;
+            margin: 0;
+        }
+        &-project {
+            font-size: $h6;
+            font-weight: 800;
+        }
+        &-description {
+            margin: 0;
+            font-size: $h5;
+            font-weight: 500;
+        }
+    }
+
+    &__modules {
+        border-radius: 16px;
+        box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.1);
+        padding: 21px 32px;
+        &-title {
+            font-size: $h6;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+        &-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        &-item {
+            &-feature {
+                margin: 0 0 8px 0;
+                font-weight: 400;
+                text-align: end;
+            }
+            &-value {
+                text-align: end;
+                font-size: $h4;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+
+    &__state {
+        border-radius: 16px;
+        box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.1);
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        &-bar {
+            display: grid;
+            place-content: center;
+            font-weight: 800;
+
+            width: 80px;
+            height: 80px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: radial-gradient(
+                    closest-side,
+                    white 80%,
+                    transparent 80% 100%
+                ),
+                conic-gradient(#83d7b1 75%, $color-black-05 0);
+        }
+
+        &-title {
+            margin: 0;
+            font-size: $h6;
+            font-weight: 500;
+        }
+        &-date {
+            margin: 0;
+            font-size: $h5;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        &-text {
+            font-size: $h5;
+            font-weight: 500;
+        }
+        &-burger {
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(to bottom, #eb2e77, #fe8b54);
+            height: 70px;
+            aspect-ratio: 1/1;
+            display: grid;
+            place-content: center;
+            gap: 5px;
+            transition: all 0.3s ease-out;
+
+            &-row {
+                background: white;
+                border-radius: 3px;
+                height: 3px;
+                width: 30px;
+
+                &:nth-of-type(2) {
+                    width: 22px;
+                    justify-self: end;
+                }
+            }
+
+            &:hover {
+                background: linear-gradient(to bottom, #d4306f, #e27e50);
+            }
+        }
+    }
+}
