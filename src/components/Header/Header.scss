@@ -40,7 +40,7 @@
     &__modules {
         border-radius: 16px;
         box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.1);
-        padding: 21px 32px;
+        padding: 21px 40px;
         &-title {
             font-size: $h6;
             font-weight: 750;
@@ -56,6 +56,7 @@
                 margin: 0 0 8px 0;
                 font-weight: 400;
                 text-align: end;
+                font-size: 14px;
             }
             &-value {
                 text-align: end;
@@ -69,7 +70,7 @@
     &__state {
         border-radius: 16px;
         box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.1);
-        padding: 16px 32px;
+        padding: 16px 48px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -89,7 +90,7 @@
                     white 80%,
                     transparent 80% 100%
                 ),
-                conic-gradient(#83d7b1 75%, $color-black-05 0);
+                conic-gradient(#83d7b1 82%, $color-black-05 0);
         }
 
         &-title {

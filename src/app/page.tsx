@@ -1,5 +1,3 @@
-// import Image from 'next/image'
-
 import Card from '@/components/UI/Card/Card'
 import Header from '@/components/Header/Header'
 import Product from '@/components/Product/Product'
