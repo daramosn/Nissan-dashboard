@@ -1,12 +1,11 @@
 import React from 'react'
 
-import Card from '../UI/Card/Card'
 import { Nissan } from '@/assets/Nissan'
 import './Header.scss'
 
 const Header = () => {
     return (
-        <Card className="header">
+        <nav className="header">
             <Nissan className="header__logo" />
 
             <section className="header__title">
@@ -65,7 +64,7 @@ const Header = () => {
                     <span className="header__menu-burger-row" />
                 </button>
             </div>
-        </Card>
+        </nav>
     )
 }
 
