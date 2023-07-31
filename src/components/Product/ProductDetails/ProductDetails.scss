@@ -1,6 +1,7 @@
 @use '../../../styles/styles.scss' as *;
 .details {
     margin-top: 32px;
+    padding-left: 32px;
 
     &__progress {
         display: grid;

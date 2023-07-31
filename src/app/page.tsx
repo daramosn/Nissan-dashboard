@@ -1,9 +1,9 @@
+import React from 'react'
 import Card from '@/components/UI/Card/Card'
 import Header from '@/components/Header/Header'
-import Product from '@/components/Product/Product'
 
 import './Home.scss'
-import React from 'react'
+import ProductsList from '@/components/ProductsList/ProductsList'
 
 export default function Home() {
     return (
@@ -17,7 +17,7 @@ export default function Home() {
             </marquee>
             <Card className="container">
                 <Header />
-                <Product />
+                <ProductsList />
             </Card>
         </>
     )

@@ -16,8 +16,11 @@
 
     &__name {
         margin: 0;
+        width: 105px;
         font-size: 19px;
         font-weight: 750;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__button {
@@ -69,12 +72,20 @@
         &-bar {
             height: 5px;
             width: 100%;
-            background-color: #83d7b1;
+            background-color: #e4e4e4;
             border-radius: 10px;
+
+            &--completed {
+                background-color: #83d7b1;
+            }
+            &--process {
+                background-color: #ffe18f;
+            }
         }
     }
 
     &__status {
+        width: 139px;
         &-title {
             font-size: $h6;
             margin: 0;

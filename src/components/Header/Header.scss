@@ -1,6 +1,7 @@
 @use '../../styles/styles.scss' as *;
 
 .header {
+    padding: 0 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;

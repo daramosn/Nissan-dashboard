@@ -1,16 +1,27 @@
 'use client'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 
 import Button from '../UI/Button/Button'
-// import { IconLink } from '@/assets/IconLink'
-// import { IconBox } from '@/assets/IconBox'
-// import { IconHelp } from '@/assets/IconHelp'
-import Card from '../UI/Card/Card'
 import ProductDetails from './ProductDetails/ProductDetails'
 
 import './Product.scss'
+import Card from '../UI/Card/Card'
 
-const Product = () => {
+type ProductProps = {
+    name: string
+    mileston: string
+    completion: string
+    progress: string[]
+    status: string
+}
+
+const Product: FC<ProductProps> = ({
+    name,
+    mileston,
+    completion,
+    progress,
+    status,
+}) => {
     const [showContent, setShowContent] = useState(false)
 
     const showStateHandler = () => {
@@ -21,7 +32,7 @@ const Product = () => {
         <Card>
             <div className="product">
                 <div className="product__led" />
-                <h5 className="product__name">Nissan Juke</h5>
+                <h5 className="product__name">{name}</h5>
                 <div>
                     <Button>Product</Button>
                     <Button className="product__button--pink">Storyline</Button>
@@ -33,22 +44,18 @@ const Product = () => {
                             Stage <span>GOLD</span>
                         </h5>
                         <h5 className="product__state-mileston">
-                            Next Mileston <span>01.09.22</span>
+                            Next Mileston <span>{mileston}</span>
                         </h5>
                         <h5 className="product__state-completion">
-                            Est Completion <span>19.11.22</span>
+                            Est Completion <span>{completion}</span>
                         </h5>
 
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
-                        <span className="product__state-bar" />
+                        {progress.map((state, index) => (
+                            <span
+                                key={index}
+                                className={`product__state-bar product__state-bar--${state}`}
+                            />
+                        ))}
                     </div>
                 )}
 
@@ -58,9 +65,7 @@ const Product = () => {
                     }`}
                 >
                     <h5 className="product__status-title">Status</h5>
-                    <p className="product__status-description">
-                        With client to review
-                    </p>
+                    <p className="product__status-description">{status}</p>
                 </div>
 
                 <button
