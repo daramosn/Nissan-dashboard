@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Nissan } from '@/assets/Nissan'
 import './Header.scss'
+import CircleProgressBar from '../UI/CircleProgressBar/CircleProgressBar'
 
 const Header = () => {
     return (
@@ -51,9 +52,8 @@ const Header = () => {
                     </h5>
                     <h4 className="header__state-date">19th November 2022</h4>
                 </div>
-                <div className="header__state-bar">
-                    <p>82%</p>
-                </div>
+
+                <CircleProgressBar value={82} />
             </div>
 
             <div className="header__menu">

@@ -1,0 +1,105 @@
+@use '../../../styles/styles.scss' as *;
+.details {
+    margin-top: 32px;
+
+    &__progress {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 24px;
+
+        &-title {
+            font-size: $h6;
+            font-weight: 650;
+            margin: 0 0 8px 0;
+        }
+        &-bar {
+            display: block;
+            height: 8px;
+            width: 100%;
+            background-color: #83d7b1;
+            border-radius: 10px;
+        }
+    }
+
+    &__info {
+        margin-top: 32px;
+        display: flex;
+        gap: 32px;
+
+        &-actions {
+            display: grid;
+            gap: 16px;
+
+            &--button {
+                box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+                border-radius: 50px;
+                border: none;
+                font-size: 17px;
+                font-weight: 500;
+                padding: 8px 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+        &-notes {
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+
+            padding: 16px;
+            &-title {
+                margin: 0;
+                font-size: $h6;
+
+                &:first-child {
+                    margin-left: auto;
+                }
+            }
+            &-description {
+            }
+        }
+
+        &-stage {
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
+            padding: 16px 40px;
+
+            &-title {
+                margin: 0;
+                font-size: 36px;
+                & > * {
+                    font-weight: 400;
+                }
+            }
+
+            &-values {
+                margin-top: 16px;
+                display: flex;
+                justify-content: space-between;
+                gap: 16px;
+            }
+
+            &-dates {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                align-items: flex-end;
+
+                &--no-bold,
+                &--bold {
+                    margin: 0;
+                }
+                &--no-bold {
+                    font-weight: 500;
+                }
+                &--bold {
+                    font-size: $h5;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}
