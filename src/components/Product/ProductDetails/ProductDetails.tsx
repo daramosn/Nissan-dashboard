@@ -1,56 +1,50 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-import './ProductDetails.scss'
 import Button from '@/components/UI/Button/Button'
 import { IconLink } from '@/assets/IconLink'
 import { IconBox } from '@/assets/IconBox'
 import { IconHelp } from '@/assets/IconHelp'
 import CircleProgressBar from '@/components/UI/CircleProgressBar/CircleProgressBar'
 
-const ProductDetails = () => {
+import './ProductDetails.scss'
+
+const barNameList = [
+    'Screen design',
+    'Reviewed',
+    'Story board',
+    'Reviewed',
+    'Alpha',
+    'Reviewed',
+    'Gold',
+    'Reviewed',
+    'Final release',
+    'Completed',
+]
+
+type ProductDetailsProps = {
+    mileston: string
+    completion: string
+    progress: string[]
+}
+
+const ProductDetails: FC<ProductDetailsProps> = ({
+    mileston,
+    completion,
+    progress,
+}) => {
     return (
         <section className="details">
             <div className="details__progress">
-                <div>
-                    <h5 className="details__progress-title">Screen Design</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Reviewed</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Storyboard</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Reviewed</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Alpha</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Reviewed</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Gold</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Reviewed</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Final release</h5>
-                    <span className="details__progress-bar" />
-                </div>
-                <div>
-                    <h5 className="details__progress-title">Completed</h5>
-                    <span className="details__progress-bar" />
-                </div>
+                {progress.map((state, index) => (
+                    <div key={index}>
+                        <h5 className="details__progress-title">
+                            {barNameList[index]}
+                        </h5>
+                        <span
+                            className={`details__progress-bar details__progress-bar--${state}`}
+                        />
+                    </div>
+                ))}
             </div>
 
             <div className="details__info">
@@ -87,13 +81,13 @@ const ProductDetails = () => {
                                 Next Mileston
                             </h4>
                             <span className="details__info-stage-dates--bold">
-                                01.09.22
+                                {mileston}
                             </span>
                             <h4 className="details__info-stage-dates--no-bold">
                                 Est completion
                             </h4>
                             <span className="details__info-stage-dates--bold">
-                                01.09.22
+                                {completion}
                             </span>
                         </div>
                         <CircleProgressBar value={95} />

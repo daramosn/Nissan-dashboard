@@ -18,7 +18,7 @@ export const dummyProducts = [
         status: 'With client to review',
     },
     {
-        name: 'Product 2 sfsdfdsfsdfsdsadfsfds',
+        name: 'Product 2',
         mileston: '01.09.22',
         completion: '19.11.22',
         progress: [

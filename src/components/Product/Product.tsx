@@ -76,7 +76,13 @@ const Product: FC<ProductProps> = ({
                 />
             </div>
 
-            {showContent && <ProductDetails />}
+            {showContent && (
+                <ProductDetails
+                    mileston={mileston}
+                    completion={completion}
+                    progress={progress}
+                />
+            )}
         </Card>
     )
 }
