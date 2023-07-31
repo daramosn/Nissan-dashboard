@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 import Button from '@/components/UI/Button/Button'
 import { IconLink } from '@/assets/IconLink'
 import { IconBox } from '@/assets/IconBox'
 import { IconHelp } from '@/assets/IconHelp'
-import CircleProgressBar from '@/components/UI/CircleProgressBar/CircleProgressBar'
+import CircleBar from '@/components/UI/CircleBar/CircleBar'
 
 import './ProductDetails.scss'
 
@@ -90,7 +90,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({
                                 {completion}
                             </span>
                         </div>
-                        <CircleProgressBar value={95} />
+                        <CircleBar value={95} />
                     </div>
                 </div>
             </div>

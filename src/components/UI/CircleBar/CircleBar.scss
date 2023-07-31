@@ -1,0 +1,40 @@
+.circle-bar {
+    position: relative;
+    display: inline-block;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.156));
+    &__svg {
+        width: 80px;
+        height: 80px;
+        transform: rotate(-90deg);
+    }
+    &__track {
+        fill: transparent;
+        stroke-width: 18px;
+        stroke-dasharray: 622px;
+        stroke-dashoffset: 0;
+        stroke: #e0e0e0;
+    }
+    &__progress {
+        stroke: #76e5b1;
+        stroke-width: 18px;
+        stroke-linecap: round;
+        fill: transparent;
+    }
+
+    &__number {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        top: 47%;
+        transform: translate(-50%, -50%);
+
+        font-size: 24px;
+        font-weight: 900;
+
+        &-symbol {
+            font-size: 10px;
+            font-weight: 900;
+            position: absolute;
+        }
+    }
+}
