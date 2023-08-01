@@ -7,18 +7,9 @@ import ProductsList from '@/components/ProductsList/ProductsList'
 
 export default function Home() {
     return (
-        <>
-            {/* @ts-ignore */}
-            <marquee direction="right" style={{ background: '#ffb74d' }}>
-                ✴️ ✴️ ✴️ -- Still in progress! 🛠️ - - - - Still in progress! 🛠️
-                - - - - Still in progress! 🛠️ - - - - Still in progress! 🛠️ --
-                ✴️ ✴️ ✴️
-                {/* @ts-ignore */}
-            </marquee>
-            <Card className="container">
-                <Header />
-                <ProductsList />
-            </Card>
-        </>
+        <Card className="container">
+            <Header />
+            <ProductsList />
+        </Card>
     )
 }
