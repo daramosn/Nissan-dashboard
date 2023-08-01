@@ -3,9 +3,9 @@ import { FC, useState } from 'react'
 
 import Button from '../UI/Button/Button'
 import ProductDetails from './ProductDetails/ProductDetails'
+import Card from '../UI/Card/Card'
 
 import './Product.scss'
-import Card from '../UI/Card/Card'
 
 type ProductProps = {
     name: string
@@ -33,7 +33,11 @@ const Product: FC<ProductProps> = ({
     return (
         <Card>
             <div className="product">
-                <div className="product__led" />
+                <div
+                    className={`product__led ${
+                        progress.includes('process') && 'product__led--light'
+                    }`}
+                />
                 <h5 className="product__name">{name}</h5>
                 <div>
                     <Button>Product</Button>
