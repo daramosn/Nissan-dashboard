@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { Nissan } from '@/assets/Nissan'
-import './Header.scss'
 import CircleBar from '../UI/CircleBar/CircleBar'
+
+import './Header.scss'
 
 const Header = () => {
     return (
