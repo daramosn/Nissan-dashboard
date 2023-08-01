@@ -17,6 +17,7 @@ const ProductsList = () => {
                         mileston={product.mileston}
                         completion={product.completion}
                         progress={product.progress}
+                        percent={product.percent}
                         status={product.status}
                     />
                 ))}

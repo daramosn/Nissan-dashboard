@@ -1,4 +1,5 @@
-import React, { FC } from 'react'
+'use client'
+import React, { FC, useEffect, useState } from 'react'
 
 import './CircleBar.scss'
 
@@ -7,7 +8,19 @@ type CircleBarProps = {
 }
 
 const CircleBar: FC<CircleBarProps> = ({ value = 0 }) => {
-    const lenghtCircle = 622 - (value / 100) * 622
+    const [counter, setCounter] = useState(0)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (counter < value) {
+                setCounter((prevCounter) => prevCounter + 1)
+            }
+        }, 10)
+
+        return () => clearInterval(interval)
+    }, [value, counter])
+
+    const lengthCircle = 622 - (counter / 100) * 622
 
     return (
         <div className="circle-bar">
@@ -23,12 +36,12 @@ const CircleBar: FC<CircleBarProps> = ({ value = 0 }) => {
                     r="99"
                     cx="89"
                     cy="89"
-                    stroke-dasharray="622px"
-                    stroke-dashoffset={lenghtCircle + 'px'}
+                    strokeDasharray="622px"
+                    stroke-dashoffset={lengthCircle + 'px'}
                 />
             </svg>
             <p className="circle-bar__number">
-                {value} <span className="circle-bar__number-symbol">%</span>
+                {counter} <span className="circle-bar__number-symbol">%</span>
             </p>
         </div>
     )

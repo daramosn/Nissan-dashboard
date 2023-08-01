@@ -12,6 +12,7 @@ type ProductProps = {
     mileston: string
     completion: string
     progress: string[]
+    percent: number
     status: string
 }
 
@@ -20,6 +21,7 @@ const Product: FC<ProductProps> = ({
     mileston,
     completion,
     progress,
+    percent,
     status,
 }) => {
     const [showContent, setShowContent] = useState(false)
@@ -81,6 +83,7 @@ const Product: FC<ProductProps> = ({
                     mileston={mileston}
                     completion={completion}
                     progress={progress}
+                    percent={percent}
                 />
             )}
         </Card>

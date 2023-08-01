@@ -15,6 +15,7 @@ export const dummyProducts = [
             'process',
             'empty',
         ],
+        percent: 95,
         status: 'With client to review',
     },
     {
@@ -33,6 +34,7 @@ export const dummyProducts = [
             'empty',
             'empty',
         ],
+        percent: 30,
         status: 'With client to review',
     },
     {
@@ -45,12 +47,13 @@ export const dummyProducts = [
             'completed',
             'completed',
             'completed',
-            'empty',
+            'process',
             'empty',
             'empty',
             'empty',
             'empty',
         ],
+        percent: 55,
         status: 'With client to review',
     },
     {
@@ -69,6 +72,7 @@ export const dummyProducts = [
             'empty',
             'empty',
         ],
+        percent: 60,
         status: 'With client to review',
     },
     {
@@ -87,6 +91,7 @@ export const dummyProducts = [
             'empty',
             'empty',
         ],
+        percent: 70,
         status: 'With client to review',
     },
     {
@@ -105,6 +110,7 @@ export const dummyProducts = [
             'empty',
             'empty',
         ],
+        percent: 80,
         status: 'With client to review',
     },
     {
@@ -123,6 +129,7 @@ export const dummyProducts = [
             'completed',
             'empty',
         ],
+        percent: 90,
         status: 'With client to review',
     },
     {
@@ -141,6 +148,7 @@ export const dummyProducts = [
             'completed',
             'process',
         ],
+        percent: 95,
         status: 'With client to review',
     },
     {
@@ -159,6 +167,7 @@ export const dummyProducts = [
             'completed',
             'completed',
         ],
+        percent: 100,
         status: 'Completed',
     },
     {
@@ -177,6 +186,7 @@ export const dummyProducts = [
             'completed',
             'completed',
         ],
+        percent: 100,
         status: 'Completed',
     },
 ]

@@ -25,12 +25,14 @@ type ProductDetailsProps = {
     mileston: string
     completion: string
     progress: string[]
+    percent: number
 }
 
 const ProductDetails: FC<ProductDetailsProps> = ({
     mileston,
     completion,
     progress,
+    percent,
 }) => {
     return (
         <section className="details">
@@ -90,7 +92,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({
                                 {completion}
                             </span>
                         </div>
-                        <CircleBar value={95} />
+                        <CircleBar value={percent} />
                     </div>
                 </div>
             </div>
