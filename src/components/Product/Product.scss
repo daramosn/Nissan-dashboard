@@ -151,21 +151,3 @@
         }
     }
 }
-
-@keyframes rotation {
-    0% {
-        transform: rotateZ(0deg);
-    }
-    100% {
-        transform: rotateZ(-90deg);
-    }
-}
-
-@keyframes rotation-reverse {
-    0% {
-        transform: rotateZ(-90deg);
-    }
-    100% {
-        transform: rotateZ(0deg);
-    }
-}
